@@ -1,203 +1,35 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>我的自我介紹</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: "Segoe UI", sans-serif;
-            background: linear-gradient(120deg, #74ebd5, #ACB6E5);
-            color: #333;
-        }
-
-        /* 導覽列 */
-        nav {
-            background: rgba(0,0,0,0.7);
-            padding: 15px;
-            position: sticky;
-            top: 0;
-            text-align: center;
-        }
-
-        nav a {
-            color: white;
-            margin: 0 15px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #ffd369;
-        }
-
-        /* 區塊卡片 */
-        section {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 30px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-            animation: fadeIn 1s ease;
-        }
-
-        h2 {
-            margin-bottom: 15px;
-            color: #444;
-            border-left: 5px solid #74ebd5;
-            padding-left: 10px;
-        }
-
-        /* 清單 */
-        ul {
-            padding-left: 20px;
-        }
-
-        li {
-            margin: 8px 0;
-        }
-
-        /* 表格 */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-
-        th {
-            background: #74ebd5;
-            color: white;
-        }
-
-        th, td {
-            padding: 12px;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
-
-        tr:hover {
-            background: #f1f1f1;
-        }
-
-        /* 聯絡資訊 */
-        .contact p {
-            margin: 8px 0;
-            font-size: 16px;
-        }
-
-        /* 動畫 */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* 響應式 */
-        @media (max-width: 600px) {
-            nav a {
-                display: block;
-                margin: 10px 0;
-            }
-
-            section {
-                margin: 20px;
-            }
-        }
-    </style>
+<style>
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+}
+.header { grid-column: span 12; }
+.banner { grid-column: span 12; }
+.section { grid-column: span 4; }
+.card { grid-column: span 3; }
+.footer { grid-column: span 12; }
+.box {
+  background: #F5F7FA;
+  padding: 20px;
+}
+</style>
 </head>
 <body>
-
-<nav>
-    <a href="#about">基本資料</a>
-    <a href="#intro">自我介紹</a>
-    <a href="#skills">專長</a>
-    <a href="#hobbies">興趣</a>
-    <a href="#schedule">課表</a>
-    <a href="#contact">聯絡資訊</a>
-</nav>
-
-<section id="about">
-    <h2>基本資料</h2>
-    <p>姓名：李家仁</p>
-    <p>年齡：21歲</p>
-    <p>學校：南亞技士學院</p>
-    <p>科系：資訊工程學系</p>
-</section>
-
-<section id="intro">
-    <h2>自我介紹</h2>
-    <p>
-        老師好我是李家仁興趣是唱歌想趁年輕去實現夢想。
-    </p>
-</section>
-
-<section id="skills">
-    <h2>專長</h2>
-    <ul>
-        <li>認真上課HTML / CSS / JavaScript</li>
-        <li>程式設計</li>
-        <li>網頁製作</li>
-    </ul>
-</section>
-
-<section id="hobbies">
-    <h2>興趣</h2>
-    <ul>
-        <li>踢足球</li>
-        <li>聽音樂</li>
-        <li>玩遊戲</li>
-        <li>遊山玩水</li>
-    </ul>
-</section>
-
-<section id="schedule">
-    <h2>課表</h2>
-    <table>
-        <tr>
-            <th>時間</th>
-            <th>一</th>
-            <th>二</th>
-            <th>三</th>
-            <th>四</th>
-            <th>五</th>
-        </tr>
-        <tr>
-            <td>08:00-10:00</td>
-            <td>數學</td>
-            <td>英文</td>
-            <td>程式設計</td>
-            <td>資料結構</td>
-            <td>體育</td>
-        </tr>
-        <tr>
-            <td>10:00-12:00</td>
-            <td>資料庫</td>
-            <td>網頁設計</td>
-            <td>作業系統</td>
-            <td>計算機概論</td>
-            <td>專題</td>
-        </tr>
-    </table>
-</section>
-
-<section id="contact" class="contact">
-    <h2>聯絡資訊</h2>
-    <p>📧 Email：brian0978xxxxxxxx@gmail.com</p>
-    <p>📱 電話：0978xxxxxx46</p>
-    <p>📍 地址：桃園市XX區XX路XX巷XX弄XX號</p>
-</section>
-
+<div class="container">
+<div class="header box">LOGO + 導覽列</div>
+<div class="banner box">Banner</div>
+<div class="section box">熱門評測</div>
+<div class="section box">最新文章</div>
+<div class="section box">推薦產品</div>
+<div class="card box">文章1</div>
+<div class="card box">文章2</div>
+<div class="card box">文章3</div>
+<div class="card box">文章4</div>
+<div class="footer box">Footer</div>
+</div>
 </body>
 </html>
